@@ -1,0 +1,57 @@
+body{
+    margin:0;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    padding: 10px;
+    align-items: center;
+    background-color: rgb(123, 214, 241);
+}
+
+.titulo{
+    width: 100%;
+    text-align: center;
+}
+
+#adicionaProdutoNaLista{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.grupo{
+    width: 30%;
+}
+
+input{
+    margin: 10px 0 0;
+}
+
+#buttonAdicionar{
+    width: 15%;
+    margin: 20px 0;
+}
+
+table{
+    width: 100%;
+    background-color: rgb(202, 235, 243);
+}
+td, th {
+    border-collapse: collapse;
+    text-align: center;
+    border-bottom: 1px solid black;
+    height: 20px;
+}
+.nomeProduto{
+    width: 60%;
+}
+.valorProduto, .quantidadeProduto{
+    width: 20%;
+}
+
+.mensagens-erro{
+    color: red;
+}

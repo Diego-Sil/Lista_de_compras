@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="lista_de_compras.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="titulo">Lista de compras</h1>
+
+        <form id="adicionaProdutoNaLista">
+            <div class="grupo">
+                <label for="inputProduto">Nome do produto:</label>
+                <input id="inputProduto" name="inputProduto" type="text" placeholder="Digite o nome do produto"/>
+                <span id="nome_erro" class="mensagens-erro"></span>
+            </div>
+
+            <div class="grupo">
+                <label for="inputValor">Valor do Produto</label>
+                <input id="inputValor" name="inputValor" type="text" placeholder="Digite o Valor do produto"/>
+                <span id="valor_erro" class="mensagens-erro"></span>
+            </div>
+
+            <div class="grupo">
+                <label for="inputQuantidade">Quantidade do produto: </label>
+                <input id="inputQuantidade" name="inputQuantidade" type="text" placeholder="Digite uma quantidade"/>
+                <span id="quantidade_erro" class="mensagens-erro"></span>
+            </div>
+        </form>
+
+        <button type="button" id="buttonAdicionar">Adicionar</button>
+      
+        <table>
+            <thead>
+                <tr>
+                    <th>Produto</th>
+                    <th>Valor</th>
+                    <th>Quantidade</th>
+                </tr>
+            </thead>
+
+            <tbody id="tabelaLista">
+                <tr class="itemDaLista">
+                    
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+    
+</body>
+<script type="text/javascript" src="lista_de_compras.js"></script>
+</html>
