@@ -11,10 +11,6 @@ buttonAdicionar.addEventListener("click",function(event){
     if(erros.length === 0){
         adicionaItem(itemDaLista);
     }
-
-    form.reset();
-    var mensagensErro = document.querySelectorAll("span");
-    mensagensErro.innerHTML = " ";
         
 });
 
@@ -24,14 +20,13 @@ function adicionaItem(itemDaLista) {
     lista.appendChild(itemTr);
 }
 
-function obtemItemDoFormulario(form){ //criando uma array
+function obtemItemDoFormulario(form){ 
     var itemDaLista = {
-        // captura o valor inserido no input(campo)
+
         nomeProduto: form.inputProduto.value,
         valorProduto: form.inputValor.value,
         quantidadeProduto: form.inputQuantidade.value,
     }
-    //retornando o array
     return itemDaLista;
 }
 
@@ -52,23 +47,30 @@ function montaTr(itemDaLista){
 function validaItem(itemDaLista){
 
     erros = [];
+    var nomeErro = document.querySelector("#nome_erro");
+    var valorErro = document.querySelector("#valor_erro");
+    var quantidadeErro = document.querySelector("#quantidade_erro");
+
 
     if(itemDaLista.nomeProduto.length === 0){
-        var nomeErro = document.querySelector("#nome_erro");
         nomeErro.textContent = ("Adicione o nome do produto.");
         erros.push(nomeErro);
+    }else{
+         nomeErro.innerHTML = ("")
     }
 
     if(itemDaLista.valorProduto.length === 0){
-        var valorErro = document.querySelector("#valor_erro");
         valorErro.textContent = ("Adicione o valor do produto");
         erros.push(valorErro);
+    }else{
+       valorErro.innerHTML = ("")
     }
 
     if(itemDaLista.quantidadeProduto.length === 0){
-        var quantidadeErro = document.querySelector("#quantidade_erro");
         quantidadeErro.textContent = ("Adicione a quantidade do produto");
         erros.push(quantidadeErro);
+    }else{
+        quantidadeErro.innerHTML = ("")
     }
     console.log(erros);
     return erros;
